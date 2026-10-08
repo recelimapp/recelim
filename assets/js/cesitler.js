@@ -51,3 +51,13 @@
   });
   render();
 })();
+/* "Şansına bir kavanoz": pick a random revealed jar and show it. */
+(function () {
+  var b = document.getElementById('lucky'); if (!b) return;
+  b.addEventListener('click', function () {
+    var open = window.JAMS.filter(function (j) { return !j.sealed; });
+    var j = open[Math.floor(Math.random() * open.length)];
+    var q = document.getElementById('q'); q.value = j.name; q.dispatchEvent(new Event('input'));
+    window.Recelim.toast('Şansına çıkan: ' + j.name + ' · No. ' + j.no);
+  });
+})();

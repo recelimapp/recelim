@@ -37,7 +37,7 @@
     ['Böğürtlen', 'meyve', '#46183A', 'Rize'],
     ['Kızılcık', 'meyve', '#A8142F', 'Bolu'],
     ['Şeftali', 'meyve', '#F2A65E', 'Bursa'],
-    ['Erik', 'meyve', '#6E2545', 'Denizli'],
+    ['Erik', 'meyve', '#6E2545', 'Bursa'],
     ['Kiraz', 'meyve', '#9C1A33', 'Tekirdağ'],
     ['Nar', 'meyve', '#B2203D', 'Hatay'],
     ['Karadut', 'meyve', '#3E1430', 'Bilecik'],
@@ -52,7 +52,7 @@
     ['Alıç', 'meyve', '#C4432C', 'Kastamonu'],
     ['Kuşburnu', 'meyve', '#C9442D', 'Bayburt'],
     ['Yenidünya', 'meyve', '#F0A445', 'Antalya'],
-    ['Üzüm', 'meyve', '#6B2F4A', 'Denizli'],
+    ['Üzüm', 'meyve', '#6B2F4A', 'Manisa'],
     ['Turunç', 'narenciye', '#E68C2E', 'Antalya'],
     ['Bergamot', 'narenciye', '#D9B53E', 'Bodrum'],
     ['Portakal', 'narenciye', '#EE8A26', 'Finike'],
@@ -68,7 +68,7 @@
     ['Zeytin', 'sebze', '#5E5C2E', 'Ayvalık'],
     ['Kabak', 'sebze', '#E59C3E', 'Hatay'],
     ['Havuç', 'sebze', '#E9772C', 'Beypazarı'],
-    ['Domates', 'sebze', '#C9361F', 'Denizli'],
+    ['Domates', 'sebze', '#C9361F', 'Antalya'],
     ['Karpuz Kabuğu', 'sebze', '#B9C67C', 'Diyarbakır'],
     ['Pancar', 'sebze', '#7A1A3A', 'Konya'],
     ['Kestane', 'kuruyemis', '#7B4B2C', 'Bursa'],
@@ -151,7 +151,7 @@
     used[name] = true;
     named.push({ name: name, family: family, color: color, origin: origin || '', real: !!real });
   }
-  REAL.forEach(function (r) { push(r[0], r[1], r[2], 'Denizli', true); });
+  REAL.forEach(function (r) { push(r[0], r[1], r[2], '', true); });
   BASES.forEach(function (b) { push(b[0], b[1], b[2], b[3]); });
 
   var combos = [];

@@ -8,3 +8,11 @@
     b.addEventListener('click', function () { window.Recelim.toast(jam.name + ' — açılışta kilerde.'); });
   });
 })();
+/* Today's jar: changes every day. */
+(function () {
+  var el = document.getElementById('today'); if (!el) return;
+  var open = (window.JAMS || []).filter(function (j) { return !j.sealed; });
+  var d = new Date(), n = d.getFullYear() * 372 + d.getMonth() * 31 + d.getDate();
+  var j = open[n % open.length];
+  if (j) el.innerHTML = '✦ Bugünün kavanozu: <b style="color:var(--gold-d)">' + j.name + '</b> · No. ' + j.no;
+})();
