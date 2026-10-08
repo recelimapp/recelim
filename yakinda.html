@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sipariş · Reçelim — Siparişler Çok Yakında</title>
+<meta name="description" content="Reçelim siparişleri çok yakında açılıyor. Sıraya gir, kilerin kapısı açıldığında ilk sen bil.">
+<meta name="theme-color" content="#FBF8F2">
+<meta property="og:title" content="Sipariş · Reçelim — Siparişler Çok Yakında">
+<meta property="og:description" content="Reçelim siparişleri çok yakında açılıyor. Sıraya gir, kilerin kapısı açıldığında ilk sen bil.">
+<meta property="og:type" content="website">
+<meta property="og:image" content="assets/logo/recelim-logo-transparent.png">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500;1,600;1,700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/style.css">
+<style>
+  .wrap{ padding:clamp(48px, 8vw, 96px) 0; text-align:center; }
+  .wrap .lead{ margin-inline:auto; }
+  .gauge{ max-width:520px; margin:40px auto 0; text-align:left; }
+  .gauge__bar{ position:relative; height:12px; border-radius:999px; background:var(--paper); border:1px solid var(--line); overflow:hidden; }
+  .gauge__fill{ position:absolute; inset:0 auto 0 0; width:0; border-radius:999px; background:var(--gold-fill); transition:width 2.2s var(--ease); }
+  .gauge__fill::after{ content:""; position:absolute; inset:0; background:linear-gradient(100deg, transparent, rgba(255,255,255,.7), transparent); animation:sweep 2.8s ease-in-out infinite; }
+  @keyframes sweep{ from{ transform:translateX(-100%); } to{ transform:translateX(100%); } }
+  .gauge__row{ display:flex; justify-content:space-between; margin-top:10px; font-size:12px; font-weight:800; letter-spacing:.14em; text-transform:uppercase; color:var(--ink-3); }
+  .gauge__row b{ color:var(--gold-d); }
+  .box{ max-width:620px; margin:44px auto 0; background:var(--paper); border:1px solid var(--line); border-radius:24px; padding:clamp(26px, 5vw, 44px); box-shadow:var(--shadow); }
+  .box .form{ justify-content:center; }
+  .box .input{ max-width:none; }
+  .promises{ display:grid; grid-template-columns:repeat(3, 1fr); gap:18px; margin-top:56px; text-align:left; }
+  .faq{ max-width:720px; margin:64px auto 0; text-align:left; }
+  .faq details{ border-top:1px solid var(--line); padding:18px 4px; }
+  .faq details:last-child{ border-bottom:1px solid var(--line); }
+  .faq summary{ cursor:pointer; font-family:var(--serif); font-size:1.3rem; font-weight:600; list-style:none; display:flex; justify-content:space-between; gap:16px; }
+  .faq summary::after{ content:"+"; color:var(--gold); font-family:var(--sans); }
+  .faq details[open] summary::after{ content:"–"; }
+  .faq p{ margin:10px 0 0; color:var(--ink-2); }
+  @media (max-width:760px){ .promises{ grid-template-columns:1fr; } }
+</style>
+</head>
+<body>
+<a class="skip" href="#main">İçeriğe geç</a>
+
+<header class="header">
+  <div class="container header__inner">
+    <a class="brand" href="index.html" aria-label="Reçelim ana sayfa"><img src="assets/logo/recelim-logo-gold-dark.svg" alt="Reçelim" width="84" height="34"></a>
+    <button class="menu-btn" aria-expanded="false" aria-controls="site-nav">Menü</button>
+    <nav class="nav" id="site-nav" aria-label="Ana menü">
+      <a href="cesitler.html">Çeşitler<sup>1001</sup></a>
+      <a href="fazlasi.html">Reçelden Fazlası</a>
+      <a href="yakinda.html">Sipariş</a>
+      <a class="btn btn--gold" href="yakinda.html" data-dust>Sıraya Gir</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+  <section class="wrap">
+    <div class="container">
+      <span class="pill" data-reveal><span class="dot"></span>Çok yakında</span>
+      <h1 style="margin-top:22px" data-reveal="80">Siparişler <span class="gold"><em>çok yakında</em></span> açılıyor</h1>
+      <p class="lead" data-reveal="160">Kazan ısınıyor. Kıvam 105°C'de tutar; kilerin kapısı da o an açılır.</p>
+
+      <div class="gauge" data-reveal="220" aria-label="Kazan sıcaklığı 98 derece, hedef 105 derece">
+        <div class="gauge__bar"><div class="gauge__fill" id="fill"></div></div>
+        <div class="gauge__row"><span>Kazan: <b id="temp">20°C</b></span><span>Hedef: <b>105°C</b></span></div>
+      </div>
+
+      <div class="box" data-reveal="280">
+        <h2 style="font-size:clamp(1.5rem, 2.6vw, 2rem)">Sıraya gir, <span class="gold"><em>ilk sen bil</em></span></h2>
+        <form class="form" data-waitlist novalidate style="margin-top:22px">
+          <label class="visually-hidden" for="name">Adın</label>
+          <input class="input" id="name" name="name" type="text" placeholder="Adın" autocomplete="given-name">
+          <label class="visually-hidden" for="email">E-posta adresin</label>
+          <input class="input" id="email" name="email" type="email" placeholder="E-posta adresin" autocomplete="email" required>
+          <button class="btn btn--gold" type="submit" style="flex:1 1 100%">Sıraya Gir</button>
+        </form>
+        <p class="form-msg" role="status" aria-live="polite"></p>
+        <p class="form-note">E-postanı yalnızca açılış haberi için kullanırız.</p>
+      </div>
+
+      <div class="promises">
+        <article class="card" data-reveal="0"><span class="time">İlk haber</span><h3>Kapı açıldığında</h3><p>Sıraya girenler, siparişler açıldığında ilk haberi alır.</p></article>
+        <article class="card" data-reveal="80"><span class="time">333 kavanoz</span><h3>Mühürler açılıyor</h3><p>Hâlâ mühürlü 333 tat, açılış gecesi tek tek açıklanacak.</p></article>
+        <article class="card" data-reveal="160"><span class="time">1001 çeşit</span><h3>Tek kiler</h3><p>Dünyanın en çok çeşit reçeli, tek bir adreste: recelim.com</p></article>
+      </div>
+
+      <div class="faq" data-reveal>
+        <details><summary>Siparişler ne zaman açılıyor?</summary><p>Çok yakında. Sıraya girersen tarih kesinleştiğinde ilk sen öğrenirsin.</p></details>
+        <details><summary>Nereye gönderim yapacaksınız?</summary><p>Gönderim detayları açılışta paylaşılacak.</p></details>
+        <details><summary>E-postamı ne için kullanacaksınız?</summary><p>Yalnızca açılış haberi için. Başka hiçbir amaçla kullanılmaz, paylaşılmaz.</p></details>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="container footer__inner">
+    <img src="assets/logo/recelim-logo-gold-dark.svg" alt="Reçelim" width="70" height="28">
+    <nav aria-label="Alt menü">
+      <a href="cesitler.html">Çeşitler</a>
+      <a href="fazlasi.html">Reçelden Fazlası</a>
+      <a href="yakinda.html">Sipariş</a>
+    </nav>
+    <span>Denizli · recelim.com · © <span data-year>2026</span></span>
+  </div>
+</footer>
+
+<script src="assets/js/jams.js" defer></script>
+<script src="assets/js/site.js" defer></script>
+<script defer>
+  document.addEventListener('DOMContentLoaded', function () {
+    var NOW = 98, TARGET = 105, fill = document.getElementById('fill'), temp = document.getElementById('temp');
+    setTimeout(function () { fill.style.width = (NOW / TARGET * 100) + '%'; }, 400);
+    var t0 = performance.now();
+    (function step(t) { var k = Math.min(1, (t - t0) / 2200); temp.textContent = Math.round(20 + (NOW - 20) * (1 - Math.pow(1 - k, 3))) + '°C'; if (k < 1) requestAnimationFrame(step); })(t0);
+  });
+</script>
+</body>
+</html>

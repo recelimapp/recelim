@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sayfa bulunamadı · Reçelim</title>
+<meta name="description" content="Bu kavanoz boş çıktı.">
+<meta name="theme-color" content="#FBF8F2">
+<meta property="og:title" content="Sayfa bulunamadı · Reçelim">
+<meta property="og:description" content="Bu kavanoz boş çıktı.">
+<meta property="og:type" content="website">
+<meta property="og:image" content="assets/logo/recelim-logo-transparent.png">
+<link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500;1,600;1,700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/css/style.css">
+<style>
+  .nf{ padding:clamp(60px, 10vw, 120px) 0; text-align:center; }
+  .nf .jar{ width:110px; margin:0 auto 26px; }
+  .nf .lead{ margin-inline:auto; }
+  .nf .actions{ display:flex; gap:12px; justify-content:center; flex-wrap:wrap; margin-top:30px; }
+</style>
+</head>
+<body>
+<a class="skip" href="#main">İçeriğe geç</a>
+
+<header class="header">
+  <div class="container header__inner">
+    <a class="brand" href="/" aria-label="Reçelim ana sayfa"><img src="/assets/logo/recelim-logo-gold-dark.svg" alt="Reçelim" width="84" height="34"></a>
+    <button class="menu-btn" aria-expanded="false" aria-controls="site-nav">Menü</button>
+    <nav class="nav" id="site-nav" aria-label="Ana menü">
+      <a href="/cesitler.html">Çeşitler<sup>1001</sup></a>
+      <a href="/fazlasi.html">Reçelden Fazlası</a>
+      <a href="/yakinda.html">Sipariş</a>
+      <a class="btn btn--gold" href="/yakinda.html" data-dust>Sıraya Gir</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+  <section class="nf">
+    <div class="container">
+      <div id="nf-jar"></div>
+      <p class="kicker">404</p>
+      <h1>Bu kavanoz <span class="gold"><em>boş</em></span> çıktı</h1>
+      <p class="lead">Aradığın sayfa kilerde yok. Ama 1001 kavanoz seni bekliyor.</p>
+      <div class="actions"><a class="btn btn--gold" href="/" data-dust>Ana Sayfa</a><a class="btn btn--line" href="/cesitler.html" data-dust>Çeşitler</a></div>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="container footer__inner">
+    <img src="/assets/logo/recelim-logo-gold-dark.svg" alt="Reçelim" width="70" height="28">
+    <nav aria-label="Alt menü">
+      <a href="/cesitler.html">Çeşitler</a>
+      <a href="/fazlasi.html">Reçelden Fazlası</a>
+      <a href="/yakinda.html">Sipariş</a>
+    </nav>
+    <span>Denizli · recelim.com · © <span data-year>2026</span></span>
+  </div>
+</footer>
+
+<script src="/assets/js/jams.js" defer></script>
+<script src="/assets/js/site.js" defer></script>
+<script defer>
+  document.addEventListener('DOMContentLoaded', function () {
+    document.getElementById('nf-jar').innerHTML = Recelim.jarSVG({ name: 'Boş', color: '#F1E8D8', no: '0000' }, { width: 110 });
+  });
+</script>
+</body>
+</html>

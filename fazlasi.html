@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Reçelden Fazlası · Reçelim</title>
+<meta name="description" content="Reçel sadece kahvaltılık değil: şerbetler, peynir eşleşmeleri, yemekler, tatlılar, hediyeler. Binbir çeşidin binbir hâli.">
+<meta name="theme-color" content="#FBF8F2">
+<meta property="og:title" content="Reçelden Fazlası · Reçelim">
+<meta property="og:description" content="Reçel sadece kahvaltılık değil: şerbetler, peynir eşleşmeleri, yemekler, tatlılar, hediyeler. Binbir çeşidin binbir hâli.">
+<meta property="og:type" content="website">
+<meta property="og:image" content="assets/logo/recelim-logo-transparent.png">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500;1,600;1,700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/style.css">
+<style>
+  .top{ padding:clamp(40px, 6vw, 72px) 0 10px; text-align:center; }
+  .top .lead{ margin-inline:auto; }
+  .head{ max-width:640px; margin:0 auto 36px; text-align:center; }
+  .head .lead{ margin-inline:auto; }
+  .uses{ display:grid; grid-template-columns:repeat(3, 1fr); gap:18px; }
+  .uses .card ul{ margin:12px 0 0; padding:0; list-style:none; }
+  .uses .card li{ padding:9px 0; border-top:1px solid var(--line-soft); color:var(--ink-2); font-size:15px; }
+  .uses .card li:first-child{ border-top:0; }
+  .pairs{ display:grid; grid-template-columns:repeat(4, 1fr); gap:18px; }
+  .pair{ text-align:center; }
+  .pair .jar{ width:70px; margin:0 auto 12px; }
+  .pair b{ display:block; font-family:var(--serif); font-size:1.3rem; }
+  .pair span{ color:var(--ink-3); font-size:14px; }
+  .recipes{ display:grid; grid-template-columns:repeat(3, 1fr); gap:18px; }
+  .recipe h3{ margin-bottom:6px; }
+  .recipe .meta{ font-size:12px; font-weight:800; letter-spacing:.14em; text-transform:uppercase; color:var(--gold); }
+  .recipe ol{ margin:12px 0 0; padding-left:20px; color:var(--ink-2); font-size:15px; }
+  .recipe li{ margin:6px 0; }
+  .idea{ position:relative; }
+  .idea .tag{ position:absolute; top:18px; right:18px; font-size:10px; font-weight:800; letter-spacing:.16em; text-transform:uppercase; color:var(--gold-d); border:1px solid var(--line); border-radius:999px; padding:3px 9px; }
+  @media (max-width:900px){ .uses,.recipes{ grid-template-columns:1fr 1fr; } .pairs{ grid-template-columns:1fr 1fr; } }
+  @media (max-width:600px){ .uses,.recipes{ grid-template-columns:1fr; } }
+</style>
+</head>
+<body>
+<a class="skip" href="#main">İçeriğe geç</a>
+
+<header class="header">
+  <div class="container header__inner">
+    <a class="brand" href="index.html" aria-label="Reçelim ana sayfa"><img src="assets/logo/recelim-logo-gold-dark.svg" alt="Reçelim" width="84" height="34"></a>
+    <button class="menu-btn" aria-expanded="false" aria-controls="site-nav">Menü</button>
+    <nav class="nav" id="site-nav" aria-label="Ana menü">
+      <a href="cesitler.html">Çeşitler<sup>1001</sup></a>
+      <a href="fazlasi.html">Reçelden Fazlası</a>
+      <a href="yakinda.html">Sipariş</a>
+      <a class="btn btn--gold" href="yakinda.html" data-dust>Sıraya Gir</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+  <section class="top">
+    <div class="container">
+      <p class="kicker" data-reveal>Reçelden fazlası</p>
+      <h1 data-reveal="80">Reçel sadece <span class="gold"><em>reçel</em></span> değil</h1>
+      <p class="lead" data-reveal="160">Bir kavanoz; bir kahvaltı, bir sos, bir şerbet, bir hediye, bir sofra… Binbir çeşidin binbir hâli.</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="uses">
+        <article class="card" data-reveal="0"><span class="time">Sofrada</span><h3>Kahvaltının ötesinde</h3><ul><li>Süzme yoğurt, vişne ve ceviz</li><li>Sıcak krep üstüne kayısı</li><li>Tereyağlı köy ekmeğine ayva</li></ul></article>
+        <article class="card" data-reveal="80"><span class="time">Tatlıda</span><h3>Bir kaşık, bir tatlı</h3><ul><li>Kaymaklı dondurmaya ılık incir</li><li>Cheesecake üstüne böğürtlen</li><li>Sütlacın üstüne gül</li></ul></article>
+        <article class="card" data-reveal="160"><span class="time">Bardakta</span><h3>Reçel şerbetleri</h3><ul><li>Gül reçeli, maden suyu, nane</li><li>Vişne ve bergamotlu limonata</li><li>Reçelli sıcak çikolata</li></ul></article>
+        <article class="card" data-reveal="0"><span class="time">Mutfakta</span><h3>Yemeğin gizli tadı</h3><ul><li>Izgara hellim ve incir</li><li>Fırın tavuğa ayva glazesi</li><li>Salata sosuna bir kaşık turunç</li></ul></article>
+        <article class="card" data-reveal="80"><span class="time">Hediyede</span><h3>Kavanozda bir jest</h3><ul><li>Tadım kutuları</li><li>Mini kavanoz nikâh ve doğum hediyeleri</li><li>Kurumsal hediyeler</li></ul></article>
+        <article class="card idea" data-reveal="160"><span class="tag">Fikir</span><span class="time">Deneyimde</span><h3>Bir sofra kurmak</h3><ul><li>Sıcak reçel fondüsü</li><li>Yedi kavanozluk tadım tepsisi</li><li>Belki bir gün: rafları reçelle dolu küçük bir kafe</li></ul></article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" style="padding-top:0">
+    <div class="container">
+      <div class="head" data-reveal>
+        <p class="kicker">Peynir tabağı</p>
+        <h2>Tuzlu ile tatlının <span class="gold"><em>en eski dostluğu</em></span></h2>
+      </div>
+      <div class="pairs">
+        <div class="pair" data-reveal="0"><span data-jar-name="İncir"></span><b>Ezine × İncir</b><span>Kremsi ve derin</span></div>
+        <div class="pair" data-reveal="80"><span data-jar-name="Vişne"></span><b>Tulum × Vişne</b><span>Keskin ve canlı</span></div>
+        <div class="pair" data-reveal="160"><span data-jar-name="Bergamot"></span><b>Keçi peyniri × Bergamot</b><span>Ferah ve zarif</span></div>
+        <div class="pair" data-reveal="240"><span data-jar-name="Acı Biber"></span><b>Kaşar × Acı biber</b><span>Sıcak ve cesur</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" style="padding-top:0">
+    <div class="container">
+      <div class="head" data-reveal>
+        <p class="kicker">Tarif defteri</p>
+        <h2>Üç küçük tarif</h2>
+      </div>
+      <div class="recipes">
+        <article class="card recipe" data-reveal="0"><span class="meta">5 dakika · 1 bardak</span><h3>Gül şerbeti</h3><ol><li>Bardağa 2 tatlı kaşığı gül reçeli koy.</li><li>Yarım limon sık, buz ekle.</li><li>Soğuk maden suyuyla doldur, karıştır.</li><li>Birkaç taze nane yaprağıyla servis et.</li></ol></article>
+        <article class="card recipe" data-reveal="80"><span class="meta">10 dakika · 4 kişi</span><h3>Vişneli fondü</h3><ol><li>Bir kavanoz vişne reçelini kısık ateşte ılıt.</li><li>Bir tutam tarçın ve bir dilim portakal kabuğu ekle.</li><li>Küçük bir güveç kabına al.</li><li>Çilek, peynir küpü ve kurabiyeyle batırarak ye.</li></ol></article>
+        <article class="card recipe" data-reveal="160"><span class="meta">8 dakika · 2 kişi</span><h3>İncirli hellim</h3><ol><li>Hellimi dilimleyip kızgın tavada iki yüzünü kızart.</li><li>Tabağa al, üstüne birer kaşık incir reçeli koy.</li><li>Dövülmüş ceviz ve birkaç kekik yaprağı serp.</li></ol></article>
+      </div>
+      <p class="center" style="margin-top:40px" data-reveal><a class="btn btn--gold" href="yakinda.html" data-dust>Siparişler Çok Yakında</a></p>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="container footer__inner">
+    <img src="assets/logo/recelim-logo-gold-dark.svg" alt="Reçelim" width="70" height="28">
+    <nav aria-label="Alt menü">
+      <a href="cesitler.html">Çeşitler</a>
+      <a href="fazlasi.html">Reçelden Fazlası</a>
+      <a href="yakinda.html">Sipariş</a>
+    </nav>
+    <span>Denizli · recelim.com · © <span data-year>2026</span></span>
+  </div>
+</footer>
+
+<script src="assets/js/jams.js" defer></script>
+<script src="assets/js/site.js" defer></script>
+<script defer src="assets/js/fazlasi.js"></script>
+</body>
+</html>

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>1001 Çeşit · Reçelim — Dünyanın En Çok Çeşit Reçeli</title>
+<meta name="description" content="Reçelim kileri: 1001 çeşit premium reçel. Ara, filtrele, keşfet. 333 kavanoz açılış gecesi açılıyor.">
+<meta name="theme-color" content="#FBF8F2">
+<meta property="og:title" content="1001 Çeşit · Reçelim — Dünyanın En Çok Çeşit Reçeli">
+<meta property="og:description" content="Reçelim kileri: 1001 çeşit premium reçel. Ara, filtrele, keşfet. 333 kavanoz açılış gecesi açılıyor.">
+<meta property="og:type" content="website">
+<meta property="og:image" content="assets/logo/recelim-logo-transparent.png">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500;1,600;1,700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/style.css">
+<style>
+  .top{ padding:clamp(40px, 6vw, 72px) 0 24px; text-align:center; }
+  .top h1{ margin-top:6px; }
+  .tools{ display:flex; flex-direction:column; gap:16px; align-items:center; margin:30px auto 0; max-width:900px; }
+  .search{ flex:none; width:min(420px, 100%); max-width:none; }
+  .chips{ display:flex; flex-wrap:wrap; gap:8px; justify-content:center; }
+  .chip{ border:1px solid var(--line); background:var(--paper); border-radius:999px; padding:8px 15px; cursor:pointer;
+    font-size:12px; font-weight:800; letter-spacing:.12em; text-transform:uppercase; color:var(--gold-d); transition:all .25s var(--ease); }
+  .chip:hover{ border-color:var(--gold); }
+  .chip[aria-pressed="true"]{ background:var(--gold-fill); color:#3A2A0C; border-color:transparent; box-shadow:var(--shadow-sm); }
+  .count{ text-align:center; color:var(--ink-3); font-size:14px; margin:22px 0 8px; }
+  .wall{ display:grid; grid-template-columns:repeat(auto-fill, minmax(150px, 1fr)); gap:18px; padding:16px 0 10px; }
+  .item{ display:flex; flex-direction:column; align-items:center; text-align:center; gap:10px; padding:18px 10px 16px;
+    background:var(--paper); border:1px solid var(--line-soft); border-radius:var(--radius); cursor:pointer;
+    transition:transform .4s var(--ease), box-shadow .4s var(--ease), border-color .4s; font:inherit; color:inherit; }
+  .item:hover{ transform:translateY(-4px); box-shadow:var(--shadow); border-color:var(--line); }
+  .item .jar{ width:78px; }
+  .item b{ font-family:var(--serif); font-size:1.15rem; font-weight:600; line-height:1.2; }
+  .item small{ font-size:11px; font-weight:700; letter-spacing:.12em; text-transform:uppercase; color:var(--ink-3); }
+  .item.is-real{ border-color:rgba(184,138,46,.5); }
+  .item .badge{ font-size:10px; font-weight:800; letter-spacing:.14em; text-transform:uppercase; color:var(--gold-d); }
+  .more{ text-align:center; padding:26px 0 0; }
+  .empty{ text-align:center; color:var(--ink-3); padding:40px 0; }
+  @media (max-width:520px){ .wall{ grid-template-columns:repeat(2, 1fr); gap:12px; } .item .jar{ width:66px; } }
+</style>
+</head>
+<body>
+<a class="skip" href="#main">İçeriğe geç</a>
+
+<header class="header">
+  <div class="container header__inner">
+    <a class="brand" href="index.html" aria-label="Reçelim ana sayfa"><img src="assets/logo/recelim-logo-gold-dark.svg" alt="Reçelim" width="84" height="34"></a>
+    <button class="menu-btn" aria-expanded="false" aria-controls="site-nav">Menü</button>
+    <nav class="nav" id="site-nav" aria-label="Ana menü">
+      <a href="cesitler.html">Çeşitler<sup>1001</sup></a>
+      <a href="fazlasi.html">Reçelden Fazlası</a>
+      <a href="yakinda.html">Sipariş</a>
+      <a class="btn btn--gold" href="yakinda.html" data-dust>Sıraya Gir</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+  <section class="top">
+    <div class="container">
+      <p class="kicker" data-reveal>Kiler</p>
+      <h1 data-reveal="80"><span class="gold">1001</span> çeşit, tek kiler</h1>
+      <p class="lead" style="margin-inline:auto" data-reveal="160">Meyveden çiçeğe, baharattan sütlüye: dünyanın en çok çeşit reçeli burada. 333 kavanoz hâlâ mühürlü; açılış gecesi tek tek açılacak.</p>
+      <div class="tools" data-reveal="220">
+        <label class="visually-hidden" for="q">Reçel ara</label>
+        <input class="input search" id="q" type="search" placeholder="Reçel ara: incir, gül, tarçın…" autocomplete="off">
+        <div class="chips" role="group" aria-label="Kategoriler" id="chips"></div>
+      </div>
+    </div>
+  </section>
+  <section class="container" style="padding-bottom:80px">
+    <p class="count" id="count" aria-live="polite"></p>
+    <div class="wall" id="wall"></div>
+    <p class="empty" id="empty" hidden>Bu aramaya uyan bir kavanoz bulamadık. Belki de mühürlü olanlardan biridir…</p>
+    <div class="more"><button class="btn btn--line" id="more" type="button" data-dust>Daha Fazla Göster</button></div>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="container footer__inner">
+    <img src="assets/logo/recelim-logo-gold-dark.svg" alt="Reçelim" width="70" height="28">
+    <nav aria-label="Alt menü">
+      <a href="cesitler.html">Çeşitler</a>
+      <a href="fazlasi.html">Reçelden Fazlası</a>
+      <a href="yakinda.html">Sipariş</a>
+    </nav>
+    <span>Denizli · recelim.com · © <span data-year>2026</span></span>
+  </div>
+</footer>
+
+<script src="assets/js/jams.js" defer></script>
+<script src="assets/js/site.js" defer></script>
+<script src="assets/js/cesitler.js" defer></script>
+</body>
+</html>
